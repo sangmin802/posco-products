@@ -15,10 +15,9 @@ $(document).ready(function(){
     $.ajax({
         url : '../json/section4_news.json',
         method : 'get',
-        dataType : 'json'
+        dataType : 'Json'
     }).done(function(data){
         pdt = data;
-        console.log(pdt);
 
         fill(pdt)
     })
