@@ -13,7 +13,7 @@ $(document).ready(function(){
     var count2 = 0;
 
     $.ajax({
-        url : 'https://raw.githubusercontent.com/sangmin802/posco-products/master/json/section4_news.json',
+        url : '../json/section4_news.Json',
         method : 'get',
         dataType : 'Json'
     }).done(function(data){
