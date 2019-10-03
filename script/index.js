@@ -10,6 +10,7 @@ $(document).ready(function(){
     var type1 = [];
     var type2 = [];
     var width_size;
+    var count2 = 0;
 
     $.ajax({
         url : '../json/section4_news.json',
@@ -106,15 +107,14 @@ $(document).ready(function(){
                 $('.section3_wrap').css('opacity', '1');
             }, 1000)
         }
-        console.log(mobile);
     }
 
     // 우측 section 바로이동
     $(document).on('click', '.direct_go', function(){
-        count = $(this).index();
+        count2 = $(this).index();
         if(!scroll){
             scroll=true;
-            move(count);
+            move(count2);
         }
     })
 
@@ -125,14 +125,14 @@ $(document).ready(function(){
             // 마우스휠로 section이동
             delta = e.originalEvent.wheelDelta;
             console.log(delta);
-            if(delta < 0 && count < 4 && !scroll){
+            if(delta < 0 && count2 < 4 && !scroll){
                 scroll=true;
-                count++;
-                move(count);
-            }else if(delta > 0 && count > 0 && !scroll){
+                count2++;
+                move(count2);
+            }else if(delta > 0 && count2 > 0 && !scroll){
                 scroll=true;
-                count--;
-                move(count);
+                count2--;
+                move(count2);
             }
         }else if(mobile){
             e.originalEvent;
