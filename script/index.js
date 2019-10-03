@@ -13,7 +13,7 @@ $(document).ready(function(){
     var count2 = 0;
 
     $.ajax({
-        url : '../section4_news.Json',
+        url : '../json/section4_news.Json',
         method : 'get',
         dataType : 'Json'
     }).done(function(data){
