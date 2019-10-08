@@ -92,10 +92,10 @@ $(document).ready(function(){
             $('body').css('overflow-y', 'hidden');
         }else if(1024 >= width_size){
             mobile = true;
-            $('.section3_wrap').css('opacity', '0');
+            // $('.section3_wrap').css('opacity', '0');
             $('body').css('overflow-y', 'inherit');
             // 즉시적용이라 setTimeout 처리
-            setTimeout(function(){
+            // setTimeout(function(){
                 if(1024 >= width_size && width_size >= 818){
                     swiper(2, 60)
                 }else if(818 > width_size && width_size >= 600){
@@ -103,8 +103,8 @@ $(document).ready(function(){
                 }else if(600 > width_size && width_size >= 360){
                     swiper(1, 60)
                 }
-                $('.section3_wrap').css('opacity', '1');
-            }, 1000)
+                // $('.section3_wrap').css('opacity', '1');
+            // }, 1000)
         }
     }
 
@@ -178,10 +178,6 @@ $(document).ready(function(){
             slidesPerView: perview,
             spaceBetween: gap,
             loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-              },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
